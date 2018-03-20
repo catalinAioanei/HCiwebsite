@@ -58,7 +58,27 @@ img {
 	max-width:100%;
 }
 
+.videoFrame{
+  width:100%:
+}
 
+.videoFrame iframe{
+   display: block;
+   margin: 0 auto;
+}
+
+.parent {
+
+ 
+text-align:center
+
+;}
+.parent > ul{
+
+display: inline-block;
+ 
+text-align:left;
+}
 /*----------------------------------------------------
 	 2. Document Setup
 ------------------------------------------------------*/
@@ -79,7 +99,7 @@ img {
 }
 
 p{
-	font-size:16px;
+	font-size:17px;
 	line-height:27px;
 	font-weight:400;
 	padding-bottom:33px;
@@ -519,9 +539,6 @@ header{
 	color:#979497;
 }
 
-/*----------------------------------------------------
-	5. Skill & Expert Style
-------------------------------------------------------*/
 .moscow {
 	background:#f8f8f8;
 	display:table;
@@ -583,10 +600,6 @@ header{
 	margin-left:-20px;
 }
 
-/*----------------------------------------------------
-	6. Work Experience Style
-------------------------------------------------------*/
-
 .myexperties {
 	background:#fff;
 }
@@ -597,9 +610,6 @@ header{
 }
 
 
-/*----------------------------------------------------
-	 8. Protfolio Style
-------------------------------------------------------*/
 .initialresearch{
 	background:#ffffff;
 	text-align:left;
