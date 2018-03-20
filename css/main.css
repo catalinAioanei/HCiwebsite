@@ -602,11 +602,14 @@ header{
 
 .myexperties {
 	background:#fff;
+		font-size: 15px;
+
 }
 .myexperties .container{
 	padding-top:67px ;
 	padding-bottom:0 ;
 	margin-bottom:-20px;
+	font-size: 15px;
 }
 
 
