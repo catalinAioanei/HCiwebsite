@@ -104,9 +104,40 @@ menu end-->
 
 <br>
 <br>
-        <h3>Management</h3>
+        <h2>Management</h2>
+<div class="parent">
+         <h5>User Manual</h5>
+      <ul>
+        <li>Typing ‘help’ will give more information on what the bot can do.</li>
+        
+      </ul>
+ <h5>Deployment Manual</h5>
+ <h6>For Chatbot</h6>
+      <ul>
+        <li>Download the code</li>
+        <li>run “npm install”</li>
+        <li>run “node .”</li>
+        <li>The bot should be live on port 3000</li>
+        
+      </ul>
 
-        </div>
+      <h6>For Flask</h6>
+      <ul>
+        <li>Download the code</li>
+        <li>additionally download a pretrained glove model</li>
+        <li>run “docker-compose up”</li>
+        <li>test endpoint at http://<IP>:5000/predict/</li>
+        
+      </ul>
+
+     <h6>Connecting both:</h6>
+      <ul>
+        <li>Change the skills/newrequests….py to the flask link http://<IP>:5000/predict/</li>
+       
+      </ul>
+
+
+        </div></div>
         
       </div>     
     </div>    
