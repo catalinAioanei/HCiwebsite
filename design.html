@@ -109,7 +109,38 @@ menu end-->
         <center><img src="images/diagram.png" style="width: 60%; height: 60%"></center>
         <h3>Sequence Diagram</h3>
 <center><img src="images/sequence.png" style="width: 60%; height: 60%"></center>
-        </div>
+<br><br>
+        <h3>Design Pattern</h3>
+<div class="parent">
+
+        <h6>Proxy</h6>
+      <ul>
+        <li>For the FLask API we used the proxy pattern to encapsulate the database. This way any database can be used by only changing the database_manager.py, no other changes are needed.</li>
+        </ul>
+      
+    <h6>Iterator</h6>
+      <ul>
+        <li>To query the data we used the Iterator pattern. This is a common design pattern used for such a task.</li></ul>
+            <h6>Null Object</h6>
+      <ul>
+        <li>The null object is used when the database_manager.py does not return any actual answer. Afterwards the return of the function is checked for content.</li></ul>
+            <h6>Singleton</h6>
+      <ul>
+        <li>The singleton pattern is used for the application. There can only be one instance of a flask app at any given time.
+</li></ul>
+            <h6>Observer</h6>
+      <ul>
+        <li>The observer pattern is used for all bot conversations. The bot listens to specific words and triggers scripts accordingly.
+</li>
+        
+      </ul></div>
+<h6>Data Storage</h6>
+
+<p>The data is stored locally in the flask app. Since Camden has a large data pipeline and only gave us a small sample to work on, creating a separate database for our app and synchronising it with the open camden database would have been a tedious and in the end redundant task. We have a local .json file which is parsed when the app is first started. Our data is a list of documents. A document object has several entries: a title, a date, a link and several questions. The questions have been processed by our analyser.
+</p>
+
+
+        </div></div>
         
       </div>     
     </div>    
