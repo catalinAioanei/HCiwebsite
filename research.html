@@ -60,11 +60,11 @@
                         <li class="menuItem"><a href="index.html#moscow">MoSCow Requirements</a></li>
                         <li class="menuItem"><a href="research.html#Research">Research</a>
                         <li class="menuItem"><a href="hci.html#hci">HCI</a>
+<li class="menuItem"><a href="design.html#Design">Design</a>
+                        <li class="menuItem"><a href="testing.html#Testing">Testing</a>
+                        <li class="menuItem"><a href="evaluation.html#Evaluation">Evaluation</a>
+                        <li class="menuItem"><a href="management.html#Management">Management</a>
 
-                        <li class="menuItem"><a href="#Design">Design</a>
-                        <li class="menuItem"><a href="#Testing">Testing</a>
-                        <li class="menuItem"><a href="#Evaluation">Evaluation</a>
-                        <li class="menuItem"><a href="#Management">Management</a>
 
                         </li>
                         </div>
@@ -105,11 +105,28 @@ menu end-->
 <br>
 <br>
         <h3>Initial Research</h3>
-      </div>
-      </div> 
-       </div> 
+
+       <p>
+Our project started with exploring the given data. We had two datasets to look at: a collection of emails, which were Freedom of Information requests labelled with a category, and we had a collection Freedom of Information pdf documents. The documents were answers to FOI requests, sometimes also including the questions asked in the pdf. 
+</p>
  
             <center><img src="images/InitialResearch.png" style="width: 60%; height: 60%" ></center>
+<h3>Related Technologies</h3>
+<p>For our chatbot, there are multiple possible devices we could choose from. We could implement our chatbot as a web application, a mobile application or even a voice assistant. In addition, as suggested by our client, we also thought of developing our chatbot on intelligent personal assistant devices on the market, for instance, Amazon Alexa and Google Home.</p>
+ 
+<p>We ended up choosing to implement our chatbot as a web application. The main reason was our client was intended to embed the chatbot onto their Freedom of Information webpage in the first place. Also, a web application is more accessible comparing to a mobile application since a web application can be used on both computers and mobile devices. This could be proved by analysing the Google search traffic for a company that provides both websites and mobile applications, around 77% of their traffic was from computers, this shows that website reaches more users. (https://brainhub.eu/blog/app-vs-website-which-to-develop-first/) Another problem of mobile application is to decide whether to develop an Android application or an iOS application. Since mobile application itself limits the number of visitors, only developing on either Android or iOS divides the numbers of potential users in roughly half again. As for voice assistance and intelligent personal assistant devices, due to the time limitation, we think it is not feasible in this time frame.
+</p>
+
+<h2>Potential Programming Languages and Frameworks</h2>
+<p>After our research on different frameworks of chatbot, we finally came up with 2 most applicable frameworks, the Microsoft bot framework that uses LUIS and botkit, which are open source frameworks.
+</p>
+<p>Microsoft bot framework supports many languages, including .NET, NODE and C#. It is best for cross platform bots that runs in various chat platforms as it uses “write once run anywhere style”. This means having built a bot using the Microsoft Bot builder, the bot can be connected to, for example, Facebook Messenger, Slack and even Alexa at the same time, without having to re-write or modify the code for each platform.
+</p>
+<p>Botkit is based on node.js, it supports multiple social media platforms either, such as Facebook, Slack and Skype, which is ideal for further development. It is particularly good for people who are new to chatbots as it is relatively easy to pick up and use. What special with botkit is it allow users to have direct access to the APIs of platforms, that means users would have a greater control over the whole interaction.
+</p>
+<p>We did not choose to start the chatbot from scratch because of the time constraint. By using these frameworks previously mentioned, we could focus on building the chat interaction, saving time on framework design and actually building it.
+</p>
+<p>We ended up choosing botkit, it is because it is well documented and easier to pick up comparing with the Microsoft bot framework. Also, botkit gives a higher degree of control on all aspects of the chat interaction.</p>
 
         </div>
         
@@ -126,12 +143,27 @@ menu end-->
                 <h3>Data preparation with NLTK</h3>        
               </div>
             </div>
+            <p>
+There are two widely used programming languages with their respective tools in natural language processing: Python and R. We decided for python because of its wide application and ease of use. The sci-kit learn library which is available in the python language is also one of the most popular and thus has a large community to ask questions and learn from. In addition we also decided to use the popular NLTK library.
+
+</p>
             <p>Before starting on working on the actual project, we first had to prepare the data and clean it up. We took an excel file provided by the client with FOI requests and a tag with the departemnt they concern and extracted all the questions and the tags needed for the training of our classifier.</p>
             <center><img src="images/1.png" style="width: 70%; height: 70%" ></center>
             <center><img src="images/2.png" style="width: 70%; height: 70%" ></center>
             <center><img src="images/3.png" style="width: 70%; height: 70%" ></center>
+<br>
+             <p>The algorithms considered for the natural language processing can be divided into preprocessing, categorisation and semantics matching. </p>
 
-             
+<p>For the first topic preprocessing we mostly researched the different available tools from the Natural Language Toolkit (NLTK). This is one of the most popular libraries for natural language tasks. </p>
+<p>The first preprocessing task we looked at was stopword removal. NLTK provides a list of stopwords that can easily be used to filter the most common english stopwords. After a few tests this approach seemed perfect for the use case as we were dealing with general english language and did not have to fit our stopword list to a specific jargon.</p>
+<p>The next preprocessing step was stemming. “In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form. “ (https://en.wikipedia.org/wiki/Stemming)  In other words removing the grammatical ending and thus to some extent the relation to other words. There are several different stemming algorithms available, we decided on the Porter Stemmer since it yields good results (https://pdfs.semanticscholar.org/1c0c/0fa35d4ff8a2f925eb955e48d655494bd167.pdf). This approach generalises questions but also removes meaning that can not be retrieved without the correct declension and conjugation.</p>
+<p>The last step was lemmatization, which is the “process of grouping together the different inflected forms of a word so they can be analysed as a single item.” (https://en.wikipedia.org/wiki/Lemmatisation) Thus, we are further generalising the question and narrowing down the vocabulary to be considered.</p>
+
+  <p>For the second topic categorisation we considered a number of different statistical models. We started with a Naive Bayes model. Which is often used as an introductory model to data science (Data Science from Scratch: Chapter 13 page 165). Using the provided email data we compared the accuracy of preprocessed and raw input data.
+Now that we had a simple model in place we looked into ways on how to improve our accuracy. We mainly looked into two different approaches that seemed appropriate for our use case: stochastic vector model (SVM) and convolutional neural network (CNN). With the use of scikit learn svm was quickly implemented and it was possible to test once again. We achieved great results with this model. Our teaching assistant suggested that the accuracy is already high and implementing a CNN approach would take up some time that can be better used researching other areas. So for categorisation we settled on a SVM.</p>
+
+<p>The semantic analysis seemed the hardest task. We started with a simple approach of matching the same words. But since we were only matching single sentences the number of words that overlapped was not really that insightful. To get a better understanding of the semantics we decided to look into a pre-trained model called GLoVe and what it would take to train your own word2vec model. Because of the small amount of data available, the second option did not seem feasible and we focused on the pre-trained network. “GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space.” (https://nlp.stanford.edu/projects/glove/) With GloVe we are able to give each word a vector relating it to other words. Using the cosine similarity between two vectors (https://en.wikipedia.org/wiki/Cosine_similarity), we were able to enhance our keyword matching from a binary score to a percentage. One drawback of the vector approach was the time taken to compare words. In a larger dataset it seems reasonable to first just search for matching keywords and afterwords for a more detailed comparison use the mentioned vectors.</p>
+
   </section>
 
 

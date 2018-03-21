@@ -54,16 +54,17 @@
                     <div class="navbar">
 
                       <ul class="nav navbar-nav">
-                        <li class="menuItem active"><a href="index.html">Home</a></li>
+                        <li class="menuItem"><a href="index.html">Home</a></li>
                         <li class="menuItem"><a href="index.html#Video">Video</a></li>
                         <li class="menuItem"><a href="index.html#moscow">MoSCow Requirements</a></li>
                         <li class="menuItem"><a href="research.html#Research">Research</a>
                         <li class="menuItem"><a href="hci.html#hci">HCI</a>
 
-                        <li class="menuItem"><a href="#Design">Design</a>
-                        <li class="menuItem"><a href="#Testing">Testing</a>
-                        <li class="menuItem"><a href="#Evaluation">Evaluation</a>
-                        <li class="menuItem"><a href="#Management">Management</a>
+                        <li class="menuItem"><a href="design.html#Design">Design</a>
+                        <li class="menuItem"><a href="testing.html#Testing">Testing</a>
+                        <li class="menuItem"><a href="evaluation.html#Evaluation">Evaluation</a>
+                        <li class="menuItem"><a href="management.html#Management">Management</a>
+
 
 
 
@@ -117,28 +118,46 @@ menu end-->
  <!--about us start-->
   <section class="aboutus" id="aboutus">
     <div class="container">
+           <div class="col-md-12">
+
       <div class="row">
-       <div class="col-md-12">
         <div class="heading">
         <h2>Our Project</h2>
       </div>
       </div> 
        </div> 
  
-            <p>A chatbot is a layer on top of, or a gateway to, a service. Sometimes it is powered by machine learning (the chatbot gets smarter the more you interact with it). Or, more commonly, it is driven using intelligent rules (i.e. if the person says this, respond with that).</p>
+            <p>The Council answers numerous Freedom of Information requests every year. From the number of parking tickets issued in specific areas to maintenance of Council owned buildings, FOI covers all information held by the public authority. </p>
 
-<p>The services a chatbot can deliver are diverse. Important life-saving health messages, to check the weather forecast or to purchase a new pair of shoes, and anything else in between.</p>
+<p>As of right now all requests are handled manually by officials. Due to requests being redirected internally to the respective department this process can take up to two months. Often times the request has been made before, resulting in extra work done by the civil servant. 
+</p>
 
-<p>The term chatbot is synonymous with text conversation but is growing quickly through voice communication… “Alexa, what time is it?” (other voice-chatbots are available!)
+<p>The requests are answered using pdf documents. In the future the council wants to move away from this formal answering method and provide short, precise answers. This project helps exploring new ideas in this area.
 
 </p>
-<p>The chatbot can talk to you through different channels; such as Facebook Messenger, Siri, WeChat, Telegram, SMS, Slack, Skype and many others.
+<p>Given the above areas to improve. We are working on a chatbot that analyzes FOI requests and determines whether these particular questions have been answered before. In addition a user can make a new FOI request through the chatbot. Also, we will start exploring a new approach to answering the requests in a single question, single answer format.
+
 
 </p>
-<p>Our project requires us to develop a Chatbot Service for the Camden Council that should automate as much as possible the whole proccess of answering FOI requests.</p>
+
+<div class="heading">
+        <h2>Our Solution</h2></div>
+<p>Our solution consists of two main parts: a chatbot and an nlp endpoint. The user interacts with the chatbot on a website and can ask FOI requests. The question is then to the flask endpoint where it is processed and searched for any matching documents. Additionally, the user can make new requests through the bot that are send to an email address to be processed by hand.
+</p>
+
+<div class="heading">
+
+        <h2>Key Features</h2></div>
+        <div class="parent">
+
+      <ul>
+
+         <li>To provide an endpoint where users could submit their FOI requests and receive instant feedback if their request is similar to a query that has been previously answered.</li>
+      <li>To provide the user with the capability of emailing their request directly to Camden through the chatbot.</li>
+      </ul></div>
 
 
-        </div>
+        </div></div>
         
   </section>  
 
@@ -160,10 +179,15 @@ menu end-->
         <div class="heading">
         <br>
 <br>
+        <h2>Project Goals</h2>
+        <p>
+The goal of this project is to explore chatbot possibilities using the given FOI request data. This project consists of a stage of data exploration and analysis. Also, a chatbot endpoint will be explored. There a different platforms and types of chatbots to consider. In the end this project should be seen as a prototype of a potential chatbot for FOI requests. This stepping stone could then be taken further.
+</p>
+
+        <br>
 <br>
 
-<br>
-        <h2>MoSCow Requirements</h2>
+        <h3>MoSCow Requirements</h3>
       </div>
       <div class = "parent">
       <h5>Must Have</h5>
@@ -191,6 +215,48 @@ menu end-->
         </div>
     </div>
     <br>
+
+  </section>
+
+
+<section id="Personas" class="myexperties">
+    <div class="container">
+        <div class="heading">
+        <h3>Personas</h3>
+      </div>
+
+      <h5>Janice Jones</h5>
+      <br>
+      <br>
+      <center><img src="images/rsz_janice.jpg" style="width: 60%; height: 60%"></center>
+      <br>
+      <br>
+      <center><h6>Motivation & Goals</h6></center>
+              <div class="parent">
+              <ul>
+                <li> Support her children</li>
+                <li> Help the local community and be involved in charitable events</li>
+              </ul></div>
+    <br>
+      <br>
+      <p>Janice is a doctor and the mother of two children. She has been living in Camden for 3 years and both of her children are students working very hard on their A-Level exam. Recently, there has been a lot noise coming from her neighbour at night, which makes her children cannot concentrate on revising and did not have enough sleep at night. Due to the consistent noise coming from her neighbours, Janice and her children has been experiencing insomnia and mental strain. Janice feels the situation has gone worse than before and will definitely have an impact on their daily lives. However, she does not know what can she do about it or who to reach out for. Since she is very busy at work during the day, she does not have time to visit the council or calling them as the Camden Council office hours clash with her own working hours. She is very worry about this condition and hoping to find a way to stop this situation from continuing.</p>
+<br>
+<br>
+<h5>Alan Walker</h5>
+      <br>
+      <br>
+      <center><img src="images/rsz_alan.jpg" style="width: 60%; height: 60%"></center>
+      <br>
+      <br>
+      <center><h6>Motivation & Goals</h6></center>
+                 <div class="parent"><ul>
+                <li> Find a new apartment in a great neighbourhood </li>
+                <li> Try to do the good decisions based on as much information as possible</li>
+              </ul></div>
+    <br>
+      <br>
+      <p>Alan is a 27 year old banker and has been working in the finance sector for 3 years now. He is currently living in Victoria and wishes to move in to Camden as he is working at a bank in Camden. He is looking for buying an apartment in Camden. He sees buying an apartment as an investment, which means the future development of this area should be considered in order to know whether there is a potential of value increase in the future. Therefore, Alan is interested in knowing the future planning of Camden, for example, the infrastructure to be built. Also, Alan is getting married with her girlfriend next year, they are planning to have a baby in near future. So Alan is also curious about the welfare and #hci of children in Camden.</p>
+
 <br>
 <br>
 <br>
@@ -203,8 +269,12 @@ menu end-->
 <br>
 <br>
 <br>
-  </section>
 
+            </div>
+        </div>
+    </div>
+  </section>
+ 
 
   </div>
 

@@ -76,7 +76,7 @@ text-align:center
 .parent > ul{
 
 display: inline-block;
- 
+font-size: 16px;
 text-align:left;
 }
 /*----------------------------------------------------
@@ -102,6 +102,7 @@ p{
 	font-size:17px;
 	line-height:27px;
 	font-weight:400;
+	color:#303030;
 	padding-bottom:33px;
 	margin:0px;
 }
@@ -352,7 +353,7 @@ header{
   margin-top:0px;
   height:80px;
   position: relative;
-  z-index: 5;
+  z-index: 15;
 }
 .navbar-wrapper .container{
 	padding:0px;
