@@ -100,7 +100,6 @@ menu end-->
 <section class="myexperties" id="Research">
     <div class="container">
         <div class="heading">
-        <div class="row">
 
 <br>
 <br>
@@ -114,13 +113,14 @@ Our project started with exploring the given data. We had two datasets to look a
 <h3>Related Technologies</h3>
 <p>For our chatbot, there are multiple possible devices we could choose from. We could implement our chatbot as a web application, a mobile application or even a voice assistant. In addition, as suggested by our client, we also thought of developing our chatbot on intelligent personal assistant devices on the market, for instance, Amazon Alexa and Google Home.</p>
  
-<p>We ended up choosing to implement our chatbot as a web application. The main reason was our client was intended to embed the chatbot onto their Freedom of Information webpage in the first place. Also, a web application is more accessible comparing to a mobile application since a web application can be used on both computers and mobile devices. This could be proved by analysing the Google search traffic for a company that provides both websites and mobile applications, around 77% of their traffic was from computers, this shows that website reaches more users. (https://brainhub.eu/blog/app-vs-website-which-to-develop-first/) Another problem of mobile application is to decide whether to develop an Android application or an iOS application. Since mobile application itself limits the number of visitors, only developing on either Android or iOS divides the numbers of potential users in roughly half again. As for voice assistance and intelligent personal assistant devices, due to the time limitation, we think it is not feasible in this time frame.
+<p>We ended up choosing to implement our chatbot as a web application. The main reason was our client was intended to embed the chatbot onto their Freedom of Information webpage in the first place. Also, a web application is more accessible comparing to a mobile application since a web application can be used on both computers and mobile devices. This could be proved by analysing the Google search traffic for a company that provides both websites and mobile applications, around 77% of their traffic was from computers, this shows that website reaches more users. <a href="#1">[1]</a>
+Another problem of mobile application is to decide whether to develop an Android application or an iOS application. Since mobile application itself limits the number of visitors, only developing on either Android or iOS divides the numbers of potential users in roughly half again. As for voice assistance and intelligent personal assistant devices, due to the time limitation, we think it is not feasible in this time frame.
 </p>
 
 <h2>Potential Programming Languages and Frameworks</h2>
 <p>After our research on different frameworks of chatbot, we finally came up with 2 most applicable frameworks, the Microsoft bot framework that uses LUIS and botkit, which are open source frameworks.
 </p>
-<p>Microsoft bot framework supports many languages, including .NET, NODE and C#. It is best for cross platform bots that runs in various chat platforms as it uses “write once run anywhere style”. This means having built a bot using the Microsoft Bot builder, the bot can be connected to, for example, Facebook Messenger, Slack and even Alexa at the same time, without having to re-write or modify the code for each platform.
+<p>Microsoft bot framework supports many languages, including .NET, NODE and C#. It is best for cross platform bots that runs in various chat platforms as it uses “write once run anywhere style”. <a href="#2">[2]</a>This means having built a bot using the Microsoft Bot builder, the bot can be connected to, for example, Facebook Messenger, Slack and even Alexa at the same time, without having to re-write or modify the code for each platform.
 </p>
 <p>Botkit is based on node.js, it supports multiple social media platforms either, such as Facebook, Slack and Skype, which is ideal for further development. It is particularly good for people who are new to chatbots as it is relatively easy to pick up and use. What special with botkit is it allow users to have direct access to the APIs of platforms, that means users would have a greater control over the whole interaction.
 </p>
@@ -128,6 +128,70 @@ Our project started with exploring the given data. We had two datasets to look a
 </p>
 <p>We ended up choosing botkit, it is because it is well documented and easier to pick up comparing with the Microsoft bot framework. Also, botkit gives a higher degree of control on all aspects of the chat interaction.</p>
 
+<h3>Microsoft Bot Builder</h3>
+<div class="parent">
+
+<ul>
+<br><br>
+<li>Supports .NET, Node, and C#
+</li>
+<li>Send/Receive Messages, Conversation System
+</li>
+<li>Unifies Platform events
+</li>
+<li>Connects to many platforms
+</li>
+<li>Uses “Write once run anywhere” style
+</li>
+<li>Best for platform agnostic products
+</li>
+</ul>
+<br><br>
+
+<p>Bot Framework is itself a platform that connects your bot to many different platforms. To use Bot Builder entails registering with MS Bot Framework and connecting your bot to it.
+</p>
+<p>MS Bot Builder supports many programming languages and platforms. It really excels at building an interaction once and having it run on the maximum amount of platforms (ie FB Messenger, Skype, Alexa, etc)
+</p>
+<p>If your bot will rely heavily on NLP, Microsoft Bot Framework makes it easy to integrate with their LUIS NLP service.
+</p>
+<p>Bot Framework has support for Azure and scaling right out of the box. It focuses on a connector based strategy, so you must first register your bot with Microsoft, and then register with individual channels and link them to the bot.
+</p>
+<p>Support for langauges like .NET and C# makes it the default choice for many enterprises and developers working outside Node JS.You must register your bot with Microsoft Bot Framework first and create connections through their Website.
+</p>
+<p>The write once run anywhere is useful if you’re trying to approximate a similar experience across a wide variety of touch points, but lacks the ability to custom tailor content to the platform it will be consumed through.
+</p>
+<p>If you’re building a product that relies heavily on NLP and being omnipresent across many different channels (including Voice and skype), then Bot Framework is likely your best choice.
+</p>
+
+<h3>Botkit</h3>
+<div class="parent">
+
+<ul>
+<br><br>
+<li>Node based
+</li>
+<li>Send/Receive Messages, Conversation System
+</li>
+<li>Easy to use and extend
+</li>
+<li>Direct access to Platform APIs
+</li>
+<li>Helpful community
+</li>
+<li>Best for platform specific products
+</li>
+</ul>
+<br><br>
+
+<p>Botkit is an Open Source Node JS bot framework, run by the people at Howdy. Botkit is easy to learn, and has a large and helpful community. There are over 120 contributors to the project, and new Platform features are integrated by the community as they become available.
+</p>
+<p>Botkit supports Facebook Messenger, Slack, Twilio, Facebook For Work, Microsoft Teams, Cisco Spark, and Web Chat. You can easily add new integrations as well.
+</p>
+<p>It is easy to get up and running with one of the starter kits provided. Because Botkit focuses on a per Platform integration, you get access to the underlying platform APIs, and have more granular control over the look and feel of your interaction.
+<p>Botkit is framework for sending and receiving messages, calling platform APIs, and running custom code. Bring whatever NLP services or other middlewares that you want.
+</p>
+<p>Botkit connects you directly to the events a platform is sending you, giving you more ways to interact with the platform than MS Bot Builder which generates generic events.
+</p></div>
         </div>
         
       </div>     
@@ -156,22 +220,43 @@ There are two widely used programming languages with their respective tools in n
 
 <p>For the first topic preprocessing we mostly researched the different available tools from the Natural Language Toolkit (NLTK). This is one of the most popular libraries for natural language tasks. </p>
 <p>The first preprocessing task we looked at was stopword removal. NLTK provides a list of stopwords that can easily be used to filter the most common english stopwords. After a few tests this approach seemed perfect for the use case as we were dealing with general english language and did not have to fit our stopword list to a specific jargon.</p>
-<p>The next preprocessing step was stemming. “In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form. “ (https://en.wikipedia.org/wiki/Stemming)  In other words removing the grammatical ending and thus to some extent the relation to other words. There are several different stemming algorithms available, we decided on the Porter Stemmer since it yields good results (https://pdfs.semanticscholar.org/1c0c/0fa35d4ff8a2f925eb955e48d655494bd167.pdf). This approach generalises questions but also removes meaning that can not be retrieved without the correct declension and conjugation.</p>
-<p>The last step was lemmatization, which is the “process of grouping together the different inflected forms of a word so they can be analysed as a single item.” (https://en.wikipedia.org/wiki/Lemmatisation) Thus, we are further generalising the question and narrowing down the vocabulary to be considered.</p>
+<p>The next preprocessing step was stemming. “In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form. “ (https://en.wikipedia.org/wiki/Stemming)  In other words removing the grammatical ending and thus to some extent the relation to other words. There are several different stemming algorithms available, we decided on the Porter Stemmer since it yields good results. <a href="#3">[3]</a> This approach generalises questions but also removes meaning that can not be retrieved without the correct declension and conjugation.</p>
+<p>The last step was lemmatization, which is the “process of grouping together the different inflected forms of a word so they can be analysed as a single item.” <a href="#4">[4]</a> Thus, we are further generalising the question and narrowing down the vocabulary to be considered.</p>
 
   <p>For the second topic categorisation we considered a number of different statistical models. We started with a Naive Bayes model. Which is often used as an introductory model to data science (Data Science from Scratch: Chapter 13 page 165). Using the provided email data we compared the accuracy of preprocessed and raw input data.
 Now that we had a simple model in place we looked into ways on how to improve our accuracy. We mainly looked into two different approaches that seemed appropriate for our use case: stochastic vector model (SVM) and convolutional neural network (CNN). With the use of scikit learn svm was quickly implemented and it was possible to test once again. We achieved great results with this model. Our teaching assistant suggested that the accuracy is already high and implementing a CNN approach would take up some time that can be better used researching other areas. So for categorisation we settled on a SVM.</p>
 
-<p>The semantic analysis seemed the hardest task. We started with a simple approach of matching the same words. But since we were only matching single sentences the number of words that overlapped was not really that insightful. To get a better understanding of the semantics we decided to look into a pre-trained model called GLoVe and what it would take to train your own word2vec model. Because of the small amount of data available, the second option did not seem feasible and we focused on the pre-trained network. “GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space.” (https://nlp.stanford.edu/projects/glove/) With GloVe we are able to give each word a vector relating it to other words. Using the cosine similarity between two vectors (https://en.wikipedia.org/wiki/Cosine_similarity), we were able to enhance our keyword matching from a binary score to a percentage. One drawback of the vector approach was the time taken to compare words. In a larger dataset it seems reasonable to first just search for matching keywords and afterwords for a more detailed comparison use the mentioned vectors.</p>
+<p>The semantic analysis seemed the hardest task. We started with a simple approach of matching the same words. But since we were only matching single sentences the number of words that overlapped was not really that insightful. To get a better understanding of the semantics we decided to look into a pre-trained model called GLoVe and what it would take to train your own word2vec model. Because of the small amount of data available, the second option did not seem feasible and we focused on the pre-trained network. “GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space.” <a href="#5">[5]</a> With GloVe we are able to give each word a vector relating it to other words. Using the cosine similarity between two vectors <a href="#6">[6]</a>, we were able to enhance our keyword matching from a binary score to a percentage. One drawback of the vector approach was the time taken to compare words. In a larger dataset it seems reasonable to first just search for matching keywords and afterwords for a more detailed comparison use the mentioned vectors.</p>
 
   </section>
+<section class="myexperties" id="Reference">
+    <div class="container">
+        <div class="heading">
+<h2>
+Reference</h2></div>
 
+<p>
+[1] M. Warcholinski, "App vs Website - Which To Develop First?", Blog Brainhub.eu. [Online]. Available: <a name="1" a href="https://brainhub.eu/blog/app-vs-website-which-to-develop-first/">https://brainhub.eu/blog/app-vs-website-which-to-develop-first/</a> [Accessed 12 Mar. 2018].</p>
+<p>
+[2] J. Church, "Picking a Chatbot Framework: Botkit vs Microsoft Bot Builder", Medium, 2017. [Online] Available: <a name="2" a href="https://medium.com/@jonchurch/picking-a-chatbot-framework-botkit-vs-microsoft-bot-builder-1088db3d075a">https://medium.com/@jonchurch/picking-a-chatbot-framework-botkit-vs-microsoft-bot-builder-1088db3d075a</a> [Accessed 17 Mar. 2018].
+</p>
+<p>
+[3] A. Jivani, "A Comparative Study of Stemming Algorithms. [Online]. Available: <a name="3" a href="https://pdfs.semanticscholar.org/1c0c/0fa35d4ff8a2f925eb955e48d655494bd167.pdf">https://pdfs.semanticscholar.org/1c0c/0fa35d4ff8a2f925eb955e48d655494bd167.pdf</a> [Accessed 13 Mar. 2018].
+</p>
+<p>
+[4] "Lemmatisation", En.wikipedia.org. [Online]. Available: <a name="4" a href="https://en.wikipedia.org/wiki/Lemmatisation.">https://en.wikipedia.org/wiki/Lemmatisation</a> [Accessed: 14- Mar- 2018].
+</p>
+<p>
+[5] J. Pennington, "GloVe: Global Vectors for Word Representation", Nlp.stanford.edu, 2018. [Online]. Available: <a name="5" a href="https://nlp.stanford.edu/projects/glove/">https://nlp.stanford.edu/projects/glove/</a> [Accessed: 16- Mar- 2018].
+</a></p>
+<p>
+[6]"Cosine similarity", En.wikipedia.org, 2018. [Online]. Available: <a name="6" a href="https://en.wikipedia.org/wiki/Cosine_similarity">https://en.wikipedia.org/wiki/Cosine_similarity.</a>[Accessed: 17- Mar- 2018].
+</a></p>
 
-      
-
+</div>
 
  
-  </div>
+  </div></div></section>
 
 
 <script type="text/javascript" src="js/modernizr.custom.26633.js"></script> 

@@ -135,11 +135,33 @@ menu end-->
         
       </ul></div>
 <h6>Data Storage</h6>
+<ul><li>
+The data is stored locally in the flask app. Since Camden has a large data pipeline and only gave us a small sample to work on, creating a separate database for our app and synchronising it with the open camden database would have been a tedious and in the end redundant task. We have a local .json file which is parsed when the app is first started. Our data is a list of documents. A document object has several entries: a title, a date, a link and several questions. The questions have been processed by our analyser.</li></ul><br>
 
-<p>The data is stored locally in the flask app. Since Camden has a large data pipeline and only gave us a small sample to work on, creating a separate database for our app and synchronising it with the open camden database would have been a tedious and in the end redundant task. We have a local .json file which is parsed when the app is first started. Our data is a list of documents. A document object has several entries: a title, a date, a link and several questions. The questions have been processed by our analyser.
-</p>
+    <h6>Overview</h6>
+        <h7>Document:</h7>
 
+    <div class="parent">
+      <ul>
+        <li>Reference</li>
+        <li>Title</li>
+        <li>Date</li>
+        <li>Link</li>
+        <li>Questions</li></ul>
+</div></div><br>
+    
+        <h6>Example:</h6>
 
+    <div class="parent">
+      <ul>
+        <li>Reference: </li>
+        <ul style="padding-left:50px"><li>21043469</li></ul>
+        <li>Title: </li><ul style="padding-left:50px"><li>Information Security PSN ITHC testing</li></ul>
+        <li>Date: </li><ul style="padding-left:50px"><li>25/09/2017</li></ul>
+        <li>Link: </li><ul style="padding-left:50px"><li><a href ="https://opendata.camden.gov.uk/views/j7mk-4ya8/files/257315b5-c867-44a2-9df4-8b30bbb5297c?filename=Response_+FOI+-+21043469.zip&content_type=application%2Fzip%3B+charset%3Dbinary">https://opendata.camden.gov.uk/views/j7mk-4ya8/files/257315b5-c867-44a2-9df4-8b30bbb5297c?filename=Response_+FOI+-+21043469.zip&content_type=application%2Fzip%3B+charset%3Dbinary</a></li></ul>
+        <li>Questions: </li><ul style="padding-left:50px"><li>responsible sourcing ithc testing</li><li>ithc testing usually carried year</li><li> council psn submission due year</li> <li>last year ithc testing cost</li>
+</li></ul>
+</div>
         </div></div>
         
       </div>     

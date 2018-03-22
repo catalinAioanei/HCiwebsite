@@ -108,33 +108,55 @@ menu end-->
 <div class="parent">
          <h5>User Manual</h5>
       <ul>
-        <li>Typing ‘help’ will give more information on what the bot can do.</li>
+        <li>
+The easiest way to learn about the bot is typing ‘help’ in the chat.
+In total the bot consists of two different skills triggered by hearing their corresponding keyword:
+</li><ul><h6>Request</h6>
+<li>After typing request you will be asked to make your request. The bot will validate your question and then find any matches. The bot will provide matching documents in order from best to least matching. By clicking on the button you can download the corresponding document.</li>
+<ul><h6>Email</h6>
+<li>After typing email you will be asked to state your question. After validation the bot will ask for your email. The request will then be send to Camden.
+
+</li>
+
+</li></ul>
         
-      </ul>
+      </ul></ul>
  <h5>Deployment Manual</h5>
  <h6>For Chatbot</h6>
-      <ul>
+ <ul><h6>Prerequisites:</h6>
+ <li>Javascript</li>
+ <li>Node.js</li>
+ <li>Node Package Manager</li>
+<ul style="padding-left:50px">
+
         <li>Download the code</li>
         <li>run “npm install”</li>
         <li>run “node .”</li>
         <li>The bot should be live on port 3000</li>
         
-      </ul>
+      </ul></ul>
 
       <h6>For Flask</h6>
-      <ul>
+       <ul><h6>Prerequisites:</h6>
+ <li>Docker</li>
+ <li>Docker-compose</li>
+ <li>Python(will be installed if not found</li>
+<ul style="padding-left:50px">
+
         <li>Download the code</li>
         <li>additionally download a pretrained glove model</li>
         <li>run “docker-compose up”</li>
-        <li>test endpoint at http://<IP>:5000/predict/</li>
+        <li>test endpoint at http://IP:5000/predict/</li>
         
-      </ul>
+      </ul></ul>
 
      <h6>Connecting both:</h6>
       <ul>
-        <li>Change the skills/newrequests….py to the flask link http://<IP>:5000/predict/</li>
+        <li>Change the skills/newrequests….py to the flask link http://IP:5000/predict/</li>
        
       </ul>
+<h6>Gantt Chart</h6>
+      <center><img src="images/gantt.png" style="width: 60%; height: 60%"></center>
 
 
         </div></div>

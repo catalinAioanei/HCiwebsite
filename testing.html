@@ -104,7 +104,19 @@ menu end-->
 
 <br>
 <br>
-        <h3>Testing</h3>
+        <h3>Testing</h3><br>
+        <p>
+In order to test the UI/UX behaviour of our bot we ran a simple suite of conversations for our bot to handle. We created simple conversation transcripts for every conversation/ functionality our bot was designed to have. We headed for the most important use cases and then for the important edge cases. We began with the cases where the users act as expected, and follow through the normal chat flow of the conversation. Then we tested our bot’s behaviour when the user’s input is designed specifically to break the conversation patterns. When testing the user’s behaviour we considered two vital cases:
+When the data the bot returns is ‘complete’ and the result’s integrity is as expected and when the result the bot fetches are rigged, icomplete or otherwise broken (such as when the bot can not find any matches or is not able to find an appropriate tag) and we made the user’s behaviour. Also, when it comes to bot testing, it is important to consider the non-deterministic aspect of this type of software. Dealing with non-determinism is a critical topic in software testing. Due to the nature of human language it is impossible for software tests to cover all possible situations. We avoided this aspect as much as possible by restricting the options the user has for feedback and treated everything other kind of answer as invalid input. That gave our software more robustness at the expense of our bot being sounding a bit rigid. 
+
+</p>
+
+<h4>Unit and integration testing
+</h4><p>To test the flask endpoint we wrote a number of tests. We test different components using unit testing. In addition, we also test the systems endpoint sending a specific json to the api and evaluating the response. Stress testing is done firing 100 of these api calls quickly after each other.
+</p>
+
+<h4>Acceptance Testing</h4>
+      <center><img src="images/test.png" style="width: 60%; height: 60%"></center>
 
         </div>
         

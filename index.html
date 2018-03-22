@@ -128,33 +128,40 @@ menu end-->
       </div>
       </div> 
        </div> 
-            <p>The Council answers numerous Freedom of Information requests every year. From the number of parking tickets issued in specific areas to maintenance of Council owned buildings, FOI covers all information held by the public authority. </p>
-
-<p>As of right now all requests are handled manually by officials. Due to requests being redirected internally to the respective department this process can take up to two months. Often times the request has been made before, resulting in extra work done by the civil servant. 
+            <p>The Council answers numerous Freedom of Information requests every year. From the number of parking tickets issued in specific areas to maintenance of Council owned buildings, FOI covers all information held by the public authority. Often times the request has been made before, resulting in extra work done by the civil servant. 
 </p>
 
-<p>The requests are answered using pdf documents. In the future the council wants to move away from this formal answering method and provide short, precise answers. This project helps exploring new ideas in this area.
+<p>The requests are answered using pdf documents. In the future the council wants to move away from this formal answering method and provide short, precise answers. This project helps exploring new ideas in this area. We created a chatbot that analyzes FOI requests and determines whether these particular questions have been answered before. In addition we provide a simple and user-friendly way to make new requests through the chatbot.
 
 </p>
-<p>Given the above areas to improve. We are working on a chatbot that analyzes FOI requests and determines whether these particular questions have been answered before. In addition a user can make a new FOI request through the chatbot. Also, we will start exploring a new approach to answering the requests in a single question, single answer format.
 
 
-</p>
 
 <div class="heading">
         <h2>Our Solution</h2></div>
 <p>Our solution consists of two main parts: a chatbot and an nlp endpoint. The user interacts with the chatbot on a website and can ask FOI requests. The question is then to the flask endpoint where it is processed and searched for any matching documents. Additionally, the user can make new requests through the bot that are send to an email address to be processed by hand.
+
 </p>
 
 <div class="heading">
+<div class="row">
 
         <h2>Key Features</h2></div>
+        <br><br>
         <div class="parent">
 
       <ul>
-
-         <li>To provide an endpoint where users could submit their FOI requests and receive instant feedback if their request is similar to a query that has been previously answered.</li>
-      <li>To provide the user with the capability of emailing their request directly to Camden through the chatbot.</li>
+      <h3>A modern approach to freedom of information</h3>
+         <li>In our project we moved away from asking freedom of information only through email with long waiting times. Instead, we provide a clean chat interface that is easy to interact with.
+         </li>
+         <br>
+        <h3>Get information on previously answered questions</h3>
+      <li>With our chatbot we provide a simple way of finding information on information maintained by the council. Through language processing we are able to compare your wording to previously answered questions and generalise in an efficient way.
+</li>
+<br>
+<h3>A user-friendly way to ask FOI request</h3>
+<li>With the chat we created a fast approach to making FOI requests. The bot will guide you through all the steps needed to submit your question and the council can reply to you as soon as possible.
+</li>
       </ul></div>
 
 
@@ -188,9 +195,10 @@ The goal of this project is to explore chatbot possibilities using the given FOI
         <br>
 <br>
 
-        <h3>MoSCow Requirements</h3>
       </div>
       <div class = "parent">
+
+      <h3>MoSCoW Requirement</h3>
       <h5>Must Have</h5>
       <ul>
         <li>Submit FOI requests through the chatbot</li>
