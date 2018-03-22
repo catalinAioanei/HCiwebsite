@@ -148,7 +148,7 @@ The data is stored locally in the flask app. Since Camden has a large data pipel
         <li>Date</li>
         <li>Link</li>
         <li>Questions</li></ul>
-</div></div><br>
+<br>
     
         <h6>Example:</h6>
 
@@ -160,8 +160,22 @@ The data is stored locally in the flask app. Since Camden has a large data pipel
         <li>Date: </li><ul style="padding-left:50px"><li>25/09/2017</li></ul>
         <li>Link: </li><ul style="padding-left:50px"><li><a href ="https://opendata.camden.gov.uk/views/j7mk-4ya8/files/257315b5-c867-44a2-9df4-8b30bbb5297c?filename=Response_+FOI+-+21043469.zip&content_type=application%2Fzip%3B+charset%3Dbinary">https://opendata.camden.gov.uk/views/j7mk-4ya8/files/257315b5-c867-44a2-9df4-8b30bbb5297c?filename=Response_+FOI+-+21043469.zip&content_type=application%2Fzip%3B+charset%3Dbinary</a></li></ul>
         <li>Questions: </li><ul style="padding-left:50px"><li>responsible sourcing ithc testing</li><li>ithc testing usually carried year</li><li> council psn submission due year</li> <li>last year ithc testing cost</li>
-</li></ul>
-</div>
+</li></ul></ul>
+
+<h2>Key Features</h2>
+<ul>
+<h3>Processing data</h3><br>
+<li>The processing involves several steps that manipulate a given string. We first tokenize it, that means splitting it by words. Afterwards we remove stopwords and punctuation that do not contain a lot of meaningful information. The last step is to lemmatize the words, which is the process of grouping together words with similar meaning.
+</li><br>
+<h3>Categorising new requests</h3><br>
+<li>To  categorise new requests we trained an SVM classifier using data gathered from a set of emails with topic labels. We parsed the emails and extracted the questions. Afterwards we used our text preprocessing to clean up the data. 
+</li><br>
+<h3>Matching similarity</h3><br>
+<li>To match the similarity of the question we compare the question to every other question in our data. All data compared will have been preprocessed. We implemented both simple keyword matching that will count the number of words that are the same and a cosine similarity approach that uses GloVe vectors.
+</li><br>
+<h3>Flask endpoint</h3><br>
+<li>The flask endpoint has a single api call that can be done. In it, the question is categorised and analysed for matching documents. In addition there exist unit and endpoint tests for the application.</li>
+</ul>
         </div></div>
         
       </div>     
